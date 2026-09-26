@@ -1,293 +1,30 @@
-
 /* =========================
-   Base
+   Social Links
 ========================= */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    background: #0d0f11;
-    color: #eeeeee;
-
-    font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        "Noto Sans JP",
-        sans-serif;
-
-    line-height: 1.8;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-
-/* =========================
-   Header
-========================= */
-
-.header {
-    position: fixed;
-
-    top: 0;
-    left: 0;
-
-    width: 100%;
-
-    padding: 28px 6%;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    z-index: 100;
-
-    background: rgba(13, 15, 17, 0.8);
-    backdrop-filter: blur(10px);
-
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-
-.logo {
-    font-size: 18px;
-    font-weight: 700;
-
-    letter-spacing: 5px;
-}
-
-
-.nav {
-    display: flex;
-    gap: 40px;
-}
-
-
-.nav a {
-    color: #888;
-
-    font-size: 12px;
-    font-weight: 500;
-
-    letter-spacing: 2px;
-
-    transition: color 0.2s;
-}
-
-
-.nav a:hover {
-    color: #ffffff;
-}
-
-
-/* =========================
-   Hero
-========================= */
-
-.hero {
-    min-height: 100vh;
-
-    padding: 0 10%;
-
-    display: flex;
-    align-items: center;
-
-    position: relative;
-}
-
-
-.hero-content {
-    margin-top: -30px;
-}
-
-
-.hero-label {
-    margin-bottom: 20px;
-
-    color: #626a72;
-
-    font-size: 11px;
-
-    letter-spacing: 5px;
-}
-
-
-.hero h1 {
-    font-size: clamp(80px, 14vw, 190px);
-
-    font-weight: 600;
-
-    letter-spacing: -8px;
-
-    line-height: 0.9;
-}
-
-
-.hero h1 span {
-    color: #59636c;
-}
-
-
-.hero-description {
+.social-links {
     margin-top: 40px;
 
-    color: #8c9297;
-
-    font-size: 14px;
-
-    letter-spacing: 1px;
-}
-
-
-/* =========================
-   Scroll
-========================= */
-
-.scroll {
-    position: absolute;
-
-    bottom: 40px;
-    right: 6%;
-
     display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    gap: 10px;
+    gap: 30px;
 }
 
-
-.scroll span {
-    color: #555;
-
-    font-size: 9px;
-
-    letter-spacing: 3px;
-
-    writing-mode: vertical-rl;
-}
-
-
-.scroll-line {
-    width: 1px;
-    height: 50px;
-
-    background: #444;
-}
-
-
-/* =========================
-   Sections
-========================= */
-
-.section {
-    min-height: 80vh;
-
-    padding: 130px 10%;
-
-    border-top: 1px solid #1b1e21;
-}
-
-
-.section-number {
-    color: #555;
-
-    font-size: 11px;
-
-    letter-spacing: 3px;
-}
-
-
-.section h2 {
-    margin-top: 10px;
-
-    font-size: clamp(50px, 7vw, 90px);
-
-    font-weight: 500;
-
-    letter-spacing: 4px;
-}
-
-
-.section-description {
-    margin-top: 20px;
-
-    color: #777;
-}
-
-
-/* =========================
-   Games
-========================= */
-
-.games {
-    background: #101214;
-}
-
-
-.coming-soon {
-    margin-top: 80px;
-
-    height: 300px;
-
-    border: 1px solid #25292d;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    color: #444;
+.social-links a {
+    color: #888;
 
     font-size: 12px;
+    letter-spacing: 2px;
 
-    letter-spacing: 5px;
+    border-bottom: 1px solid #444;
 
-    transition: 0.3s;
+    padding-bottom: 5px;
+
+    transition: 0.2s;
 }
 
-
-.coming-soon:hover {
-    border-color: #454b51;
-
-    color: #777;
-}
-
-
-/* =========================
-   About
-========================= */
-
-.about-content {
-    margin-top: 70px;
-
-    max-width: 600px;
-}
-
-
-.about-content h3 {
-    margin-bottom: 30px;
-
-    font-size: 30px;
-
-    font-weight: 400;
-}
-
-
-.about-content p {
-    margin-bottom: 20px;
-
-    color: #888;
+.social-links a:hover {
+    color: #fff;
+    border-color: #fff;
 }
 
 
@@ -318,61 +55,29 @@ a {
         padding: 22px 7%;
     }
 
-
     .nav {
         gap: 15px;
     }
-
 
     .nav a {
         font-size: 9px;
     }
 
-
     .hero {
         padding: 0 7%;
     }
 
-
     .hero h1 {
         font-size: 25vw;
-
         letter-spacing: -5px;
     }
-
 
     .section {
         padding: 100px 7%;
     }
 
-
     .coming-soon {
         height: 220px;
     }
-
-    .social-links {
-    margin-top: 40px;
-
-    display: flex;
-    gap: 30px;
-}
-
-.social-links a {
-    color: #888;
-
-    font-size: 12px;
-    letter-spacing: 2px;
-
-    border-bottom: 1px solid #444;
-
-    padding-bottom: 5px;
-
-    transition: 0.2s;
-}
-
-.social-links a:hover {
-    color: #fff;
-    border-color: #fff;
-}
 
 }
