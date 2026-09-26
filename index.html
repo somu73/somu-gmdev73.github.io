@@ -10,7 +10,7 @@
     >
 
     <!-- Site Title -->
-    <title>そむ。| HOME</title>
+    <title>そむ。｜ HOME</title>
 
     <!-- Description -->
     <meta
@@ -191,18 +191,32 @@
 
 
 
-                <!-- Game List Link -->
+                <!-- ==================================================
+                     Latest Game
+                =================================================== -->
+
+                <div
+                    id="home-game"
+                    class="home-game"
+                >
+                    <!--
+                        games-data.js のゲーム情報から
+                        home-games.js が自動生成します。
+                    -->
+                </div>
+
+
+
+                <!-- ==================================================
+                     View All Games
+                =================================================== -->
 
                 <a
                     href="games.html"
-                    class="coming-soon"
+                    class="view-all-games"
                     aria-label="ゲーム一覧を見る"
                 >
-
-                    <p>
-                        VIEW ALL GAMES →
-                    </p>
-
+                    VIEW ALL GAMES →
                 </a>
 
             </div>
@@ -385,6 +399,13 @@
          JavaScript
     =================================================== -->
 
+    <!-- Game Data -->
+    <script src="js/games-data.js"></script>
+
+    <!-- Home Game -->
+    <script src="js/home-games.js"></script>
+
+    <!-- Main -->
     <script src="js/main.js"></script>
 
 
