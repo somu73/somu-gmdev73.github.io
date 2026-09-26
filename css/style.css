@@ -82,7 +82,7 @@ a {
     font-size: 18px;
     font-weight: 700;
 
-    letter-spacing: 5px;
+    letter-spacing: 3px;
 
     transition:
         color 0.2s,
@@ -155,8 +155,6 @@ a {
 
     width: 100%;
 
-    /* 1セクション = 1画面 */
-
     height: 100vh;
     height: 100dvh;
 
@@ -202,16 +200,15 @@ a {
 /* HOME Content */
 
 .hero-content {
-    width: 50%;
-
     position: relative;
+
+    width: 50%;
 
     z-index: 2;
 }
 
 
-/* HOME Title
-   GAMES / ABOUTと同じサイズ */
+/* HOME Title */
 
 .hero h1 {
     font-size: clamp(50px, 7vw, 90px);
@@ -297,75 +294,6 @@ a {
     height: 100%;
 
     object-fit: cover;
-}
-
-
-/* ==================================================
-   Scroll Guide
-================================================== */
-
-.scroll {
-    position: absolute;
-
-    right: 6%;
-    bottom: 35px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    gap: 12px;
-
-    color: #555;
-
-    transition: color 0.2s;
-}
-
-.scroll:hover {
-    color: #aaa;
-}
-
-.scroll span {
-    font-size: 9px;
-
-    letter-spacing: 3px;
-
-    writing-mode: vertical-rl;
-}
-
-.scroll-line {
-    width: 1px;
-    height: 55px;
-
-    background: #444;
-
-    animation: scrollLine 2s infinite;
-}
-
-
-@keyframes scrollLine {
-
-    0% {
-        opacity: 0.2;
-
-        transform: scaleY(0.4);
-        transform-origin: top;
-    }
-
-    50% {
-        opacity: 1;
-
-        transform: scaleY(1);
-        transform-origin: top;
-    }
-
-    100% {
-        opacity: 0.2;
-
-        transform: scaleY(0.4);
-        transform-origin: bottom;
-    }
-
 }
 
 
@@ -681,7 +609,7 @@ a {
 }
 
 
-/* Dot */
+/* Indicator Dot */
 
 .page-indicator a::after {
     content: "";
@@ -789,7 +717,7 @@ a {
     .logo {
         font-size: 14px;
 
-        letter-spacing: 4px;
+        letter-spacing: 2px;
     }
 
     .nav {
@@ -990,9 +918,8 @@ a {
     }
 
 
-    /* Navigation Guides */
+    /* NEXT / BACK TO TOP */
 
-    .scroll,
     .next-section,
     .back-top {
         right: 7%;
