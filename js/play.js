@@ -74,6 +74,6 @@ document.addEventListener("DOMContentLoaded", () => {
     ================================================== */
 
     document.title =
-        `${game.title} | そむ。`;
+        `そむ。| ${game.title} `;
 
 });
