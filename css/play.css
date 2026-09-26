@@ -1,0 +1,228 @@
+/* ==================================================
+   Play Page
+================================================== */
+
+.play-page {
+    min-height: 100vh;
+
+    background: #0d0f11;
+    color: #eeeeee;
+}
+
+
+/* ==================================================
+   Main
+================================================== */
+
+.play-main {
+    width: 100%;
+
+    max-width: 1500px;
+
+    margin: 0 auto;
+
+    padding: 140px 10% 100px;
+}
+
+
+/* ==================================================
+   Back
+================================================== */
+
+.play-back {
+    margin-bottom: 50px;
+}
+
+.play-back a {
+    color: #555;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    transition: color 0.2s;
+}
+
+.play-back a:hover {
+    color: #ffffff;
+}
+
+
+/* ==================================================
+   Game Header
+================================================== */
+
+.play-header {
+    margin-bottom: 40px;
+}
+
+.play-header h1 {
+    font-size: clamp(42px, 6vw, 80px);
+
+    font-weight: 500;
+
+    letter-spacing: 3px;
+
+    line-height: 1.2;
+}
+
+.play-meta {
+    margin-top: 15px;
+
+    color: #555b60;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+
+/* ==================================================
+   Game Screen
+================================================== */
+
+.game-player {
+    width: 100%;
+}
+
+.unity-container {
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    background: #080a0c;
+
+    border: 1px solid #25292d;
+
+    overflow: hidden;
+}
+
+
+/* ==================================================
+   Temporary Screen
+================================================== */
+
+.unity-placeholder {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+
+    color: #444;
+}
+
+.unity-placeholder p {
+    font-size: 12px;
+
+    letter-spacing: 6px;
+}
+
+.unity-placeholder span {
+    color: #303438;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+}
+
+
+/* ==================================================
+   Information
+================================================== */
+
+.play-information {
+    max-width: 750px;
+
+    margin-top: 70px;
+}
+
+.play-information h2 {
+    margin-bottom: 20px;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    letter-spacing: 3px;
+}
+
+.play-information p {
+    color: #777;
+
+    font-size: 13px;
+
+    line-height: 2;
+}
+
+
+/* ==================================================
+   Footer
+================================================== */
+
+.play-page .games-footer {
+    width: 100%;
+
+    padding: 25px 10% 35px;
+
+    border-top: 1px solid #1b1e21;
+}
+
+.play-page .games-footer p {
+    color: #34383c;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+}
+
+
+/* ==================================================
+   Smartphone
+================================================== */
+
+@media (max-width: 700px) {
+
+    .play-main {
+        padding:
+            100px
+            7%
+            70px;
+    }
+
+    .play-back {
+        margin-bottom: 35px;
+    }
+
+    .play-header {
+        margin-bottom: 30px;
+    }
+
+    .play-header h1 {
+        font-size: clamp(36px, 11vw, 60px);
+    }
+
+    .play-information {
+        margin-top: 45px;
+    }
+
+    .play-information p {
+        font-size: 12px;
+    }
+
+    .play-page .games-footer {
+        padding:
+            20px
+            7%
+            25px;
+    }
+
+}
