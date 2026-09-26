@@ -1,83 +1,811 @@
-/* =========================
-   Social Links
-========================= */
+/* ==================================================
+   Base
+================================================== */
 
-.social-links {
-    margin-top: 40px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+
+    /* 1画面ごとにスクロールを吸着 */
+    scroll-snap-type: y mandatory;
+}
+
+body {
+    background: #0d0f11;
+    color: #eeeeee;
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        "Noto Sans JP",
+        sans-serif;
+
+    line-height: 1.8;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* ==================================================
+   Header
+================================================== */
+
+.header {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    padding: 28px 6%;
 
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    z-index: 100;
+
+    background: rgba(13, 15, 17, 0.72);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+
+/* Logo */
+
+.logo {
+    font-size: 18px;
+    font-weight: 700;
+
+    letter-spacing: 5px;
+
+    transition:
+        color 0.2s,
+        opacity 0.2s;
+}
+
+.logo:hover {
+    color: #ffffff;
+    opacity: 0.7;
+}
+
+
+/* Navigation */
+
+.nav {
+    display: flex;
+    align-items: center;
+
+    gap: 35px;
+}
+
+.nav a {
+    position: relative;
+
+    color: #777;
+
+    font-size: 11px;
+    font-weight: 500;
+
+    letter-spacing: 2px;
+
+    transition: color 0.2s;
+}
+
+.nav a:hover {
+    color: #ffffff;
+}
+
+
+/* 下線アニメーション */
+
+.nav a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -6px;
+
+    width: 0;
+    height: 1px;
+
+    background: #ffffff;
+
+    transition: width 0.25s;
+}
+
+.nav a:hover::after {
+    width: 100%;
+}
+
+
+/* ==================================================
+   共通：各画面
+================================================== */
+
+.hero,
+.section {
+    width: 100%;
+
+    height: 100vh;
+    min-height: 100vh;
+
+    position: relative;
+
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+
+    overflow: hidden;
+}
+
+
+/* ==================================================
+   00 HOME
+================================================== */
+
+.hero {
+    padding: 0 10%;
+
+    display: flex;
+    align-items: center;
+
+    background: #0d0f11;
+}
+
+
+/* メインコンテンツ */
+
+.hero-content {
+    margin-top: -20px;
+}
+
+
+/* 00 */
+
+.section-number {
+    color: #4b5157;
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 15px;
+}
+
+
+/* INDIE GAME DEVELOPER */
+
+.hero-label {
+    margin-bottom: 18px;
+
+    color: #626a72;
+
+    font-size: 11px;
+
+    letter-spacing: 5px;
+}
+
+
+/* somu. */
+
+.hero h1 {
+    font-size: clamp(85px, 14vw, 190px);
+
+    font-weight: 600;
+
+    letter-spacing: -8px;
+
+    line-height: 0.9;
+}
+
+.hero h1 span {
+    color: #59636c;
+}
+
+
+/* 説明 */
+
+.hero-description {
+    margin-top: 40px;
+
+    color: #8c9297;
+
+    font-size: 14px;
+
+    letter-spacing: 1px;
+}
+
+
+/* ==================================================
+   Scroll Guide
+================================================== */
+
+.scroll {
+    position: absolute;
+
+    right: 6%;
+    bottom: 35px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 12px;
+
+    color: #555;
+
+    transition: color 0.2s;
+}
+
+.scroll:hover {
+    color: #aaa;
+}
+
+.scroll span {
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    writing-mode: vertical-rl;
+}
+
+.scroll-line {
+    width: 1px;
+    height: 55px;
+
+    background: #444;
+
+    animation: scrollLine 2s infinite;
+}
+
+
+/* Scroll線のアニメーション */
+
+@keyframes scrollLine {
+
+    0% {
+        opacity: 0.2;
+        transform: scaleY(0.4);
+        transform-origin: top;
+    }
+
+    50% {
+        opacity: 1;
+        transform: scaleY(1);
+        transform-origin: top;
+    }
+
+    100% {
+        opacity: 0.2;
+        transform: scaleY(0.4);
+        transform-origin: bottom;
+    }
+
+}
+
+
+/* ==================================================
+   共通 Section
+================================================== */
+
+.section {
+    padding: 110px 10% 70px;
+
+    display: flex;
+    align-items: center;
+
+    border-top: 1px solid #1b1e21;
+}
+
+.section-content {
+    width: 100%;
+}
+
+.section h2 {
+    font-size: clamp(50px, 7vw, 90px);
+
+    font-weight: 500;
+
+    letter-spacing: 4px;
+
+    line-height: 1.1;
+}
+
+.section-description {
+    margin-top: 18px;
+
+    color: #777;
+
+    font-size: 14px;
+}
+
+
+/* ==================================================
+   01 GAMES
+================================================== */
+
+.games {
+    background: #101214;
+}
+
+.coming-soon {
+    margin-top: 55px;
+
+    width: 100%;
+    height: min(35vh, 300px);
+
+    border: 1px solid #25292d;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #444;
+
+    font-size: 12px;
+
+    letter-spacing: 6px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition:
+        border-color 0.3s,
+        color 0.3s,
+        background 0.3s;
+}
+
+.coming-soon:hover {
+    border-color: #454b51;
+
+    color: #888;
+
+    background: #121518;
+}
+
+
+/* カード内の薄い線 */
+
+.coming-soon::before {
+    content: "";
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 0;
+    height: 1px;
+
+    background: rgba(255, 255, 255, 0.06);
+
+    transform: translate(-50%, -50%);
+
+    transition: width 0.6s;
+}
+
+.coming-soon:hover::before {
+    width: 80%;
+}
+
+
+/* ==================================================
+   NEXT
+================================================== */
+
+.next-section {
+    position: absolute;
+
+    right: 6%;
+    bottom: 35px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 6px;
+
+    color: #555;
+
+    transition: color 0.2s;
+}
+
+.next-section:hover {
+    color: #aaa;
+}
+
+.next-section span {
+    font-size: 9px;
+
+    letter-spacing: 3px;
+}
+
+.next-arrow {
+    font-size: 18px !important;
+
+    animation: nextArrow 1.8s infinite;
+}
+
+@keyframes nextArrow {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(6px);
+    }
+
+}
+
+
+/* ==================================================
+   02 ABOUT
+================================================== */
+
+.about {
+    background: #0d0f11;
+}
+
+.about-content {
+    margin-top: 50px;
+
+    max-width: 650px;
+}
+
+.about-content h3 {
+    margin-bottom: 25px;
+
+    font-size: 30px;
+
+    font-weight: 400;
+
+    letter-spacing: 2px;
+}
+
+.about-content p {
+    margin-bottom: 18px;
+
+    color: #888;
+
+    font-size: 14px;
+}
+
+
+/* ==================================================
+   Social Links
+================================================== */
+
+.social-links {
+    margin-top: 35px;
+
+    display: flex;
+
     gap: 30px;
 }
 
 .social-links a {
+    position: relative;
+
     color: #888;
-
-    font-size: 12px;
-    letter-spacing: 2px;
-
-    border-bottom: 1px solid #444;
-
-    padding-bottom: 5px;
-
-    transition: 0.2s;
-}
-
-.social-links a:hover {
-    color: #fff;
-    border-color: #fff;
-}
-
-
-/* =========================
-   Footer
-========================= */
-
-.footer {
-    padding: 50px 6%;
-
-    border-top: 1px solid #1b1e21;
-
-    color: #444;
 
     font-size: 11px;
 
     letter-spacing: 2px;
+
+    padding-bottom: 5px;
+
+    border-bottom: 1px solid #3c4146;
+
+    transition:
+        color 0.2s,
+        border-color 0.2s;
+}
+
+.social-links a:hover {
+    color: #ffffff;
+
+    border-color: #ffffff;
 }
 
 
-/* =========================
+/* ==================================================
+   BACK TO TOP
+================================================== */
+
+.back-top {
+    position: absolute;
+
+    right: 6%;
+    bottom: 35px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 5px;
+
+    color: #555;
+
+    transition: color 0.2s;
+}
+
+.back-top:hover {
+    color: #aaa;
+}
+
+.back-top span {
+    font-size: 9px;
+
+    letter-spacing: 2px;
+}
+
+
+/* ==================================================
+   Page Indicator
+================================================== */
+
+.page-indicator {
+    position: fixed;
+
+    top: 50%;
+    right: 2.5%;
+
+    transform: translateY(-50%);
+
+    z-index: 90;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+.page-indicator a {
+    display: flex;
+    align-items: center;
+
+    color: #444;
+
+    transition:
+        color 0.2s,
+        transform 0.2s;
+}
+
+.page-indicator a:hover {
+    color: #ffffff;
+
+    transform: translateX(-4px);
+}
+
+.page-indicator span {
+    font-size: 9px;
+
+    letter-spacing: 2px;
+}
+
+
+/* 点 */
+
+.page-indicator a::after {
+    content: "";
+
+    width: 4px;
+    height: 4px;
+
+    margin-left: 8px;
+
+    border-radius: 50%;
+
+    background: currentColor;
+}
+
+
+/* ==================================================
+   Footer
+================================================== */
+
+.footer {
+    position: fixed;
+
+    left: 6%;
+    bottom: 25px;
+
+    z-index: 80;
+
+    pointer-events: none;
+}
+
+.footer p {
+    color: #34383c;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+}
+
+
+/* ==================================================
    Smartphone
-========================= */
+================================================== */
 
 @media (max-width: 700px) {
 
+    /* Header */
+
     .header {
-        padding: 22px 7%;
+        padding: 20px 6%;
     }
 
+    .logo {
+        font-size: 15px;
+    }
+
+
+    /* スマホでは外部リンクをヘッダーから隠す */
+
     .nav {
-        gap: 15px;
+        gap: 14px;
     }
 
     .nav a {
-        font-size: 9px;
+        font-size: 8px;
+
+        letter-spacing: 1px;
     }
+
+
+    /* YouTube / X はABOUTにあるので
+       ヘッダーでは4番目以降を非表示 */
+
+    .nav a:nth-child(n+4) {
+        display: none;
+    }
+
+
+    /* HOME */
 
     .hero {
         padding: 0 7%;
     }
 
+    .hero-content {
+        margin-top: 0;
+    }
+
     .hero h1 {
         font-size: 25vw;
+
         letter-spacing: -5px;
     }
 
+    .hero-label {
+        font-size: 9px;
+
+        letter-spacing: 3px;
+    }
+
+    .hero-description {
+        margin-top: 30px;
+
+        font-size: 12px;
+    }
+
+
+    /* Sections */
+
     .section {
-        padding: 100px 7%;
+        padding: 90px 7% 60px;
+    }
+
+    .section h2 {
+        font-size: 14vw;
+    }
+
+    .section-description {
+        font-size: 12px;
+    }
+
+
+    /* Games */
+
+    .coming-soon {
+        margin-top: 40px;
+
+        height: 30vh;
+
+        font-size: 9px;
+    }
+
+
+    /* About */
+
+    .about-content {
+        margin-top: 35px;
+    }
+
+    .about-content h3 {
+        font-size: 24px;
+    }
+
+    .about-content p {
+        font-size: 12px;
+    }
+
+
+    /* Indicator */
+
+    .page-indicator {
+        right: 2%;
+    }
+
+    .page-indicator span {
+        display: none;
+    }
+
+    .page-indicator a::after {
+        width: 5px;
+        height: 5px;
+
+        margin-left: 0;
+    }
+
+
+    /* Footer */
+
+    .footer {
+        left: 7%;
+
+        bottom: 18px;
+    }
+
+
+    /* Scroll / Next */
+
+    .scroll,
+    .next-section,
+    .back-top {
+        right: 7%;
+        bottom: 25px;
+    }
+
+}
+
+
+/* ==================================================
+   小さい画面・低い画面
+================================================== */
+
+@media (max-height: 650px) {
+
+    .section {
+        padding-top: 90px;
     }
 
     .coming-soon {
-        height: 220px;
+        margin-top: 30px;
+
+        height: 180px;
+    }
+
+    .about-content {
+        margin-top: 25px;
     }
 
 }
