@@ -1,1 +1,211 @@
+<!DOCTYPE html>
+<html lang="ja">
 
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <!-- Site Title -->
+    <title>GAMES | そむ。</title>
+
+    <!-- Description -->
+    <meta
+        name="description"
+        content="そむ。が制作したゲームの一覧ページです。Unityで制作したゲームを公開しています。"
+    >
+
+    <!-- Site Icon -->
+    <link
+        rel="icon"
+        type="image/png"
+        href="images/favicon.png"
+    >
+
+    <!-- Common CSS -->
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <!-- Games CSS -->
+    <link
+        rel="stylesheet"
+        href="css/games.css"
+    >
+</head>
+
+
+<body class="games-page">
+
+
+    <!-- ==================================================
+         Header
+    =================================================== -->
+
+    <header class="header">
+
+        <a href="index.html" class="logo">
+            そむ。
+        </a>
+
+
+        <nav class="nav">
+
+            <a href="index.html">
+                HOME
+            </a>
+
+            <a
+                href="games.html"
+                class="current"
+            >
+                GAMES
+            </a>
+
+            <a href="index.html#about">
+                ABOUT
+            </a>
+
+            <a
+                href="https://www.youtube.com/@somu_gmdev73"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="external-link"
+            >
+                YOUTUBE
+            </a>
+
+            <a
+                href="https://x.com/somu_gmdv73"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="external-link"
+            >
+                X
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- ==================================================
+         Main
+    =================================================== -->
+
+    <main class="games-main">
+
+
+        <!-- ==================================================
+             Games Header
+        =================================================== -->
+
+        <section class="games-header">
+
+            <p class="section-number">
+                01
+            </p>
+
+
+            <h1>
+                GAMES
+            </h1>
+
+
+            <p class="games-description">
+                制作したゲームを公開しています。
+            </p>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             Game List
+        =================================================== -->
+
+        <section
+            class="game-list-section"
+            aria-label="ゲーム一覧"
+        >
+
+            <!--
+                ゲームカードは games.js から
+                この中に自動生成します。
+            -->
+
+            <div
+                id="game-list"
+                class="game-grid"
+            >
+            </div>
+
+
+            <!-- ゲーム未登録時 -->
+
+            <div
+                id="games-empty"
+                class="games-empty"
+                hidden
+            >
+
+                <p>
+                    COMING SOON
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             Back Home
+        =================================================== -->
+
+        <div class="games-back">
+
+            <a href="index.html">
+                ← BACK TO HOME
+            </a>
+
+        </div>
+
+
+    </main>
+
+
+
+    <!-- ==================================================
+         Footer
+    =================================================== -->
+
+    <footer class="games-footer">
+
+        <p>
+            © 2026 そむ。
+        </p>
+
+    </footer>
+
+
+
+    <!-- ==================================================
+         JavaScript
+    =================================================== -->
+
+    <!-- Game Data -->
+    <script src="js/games-data.js"></script>
+
+    <!-- Game List -->
+    <script src="js/games.js"></script>
+
+
+</body>
+
+</html>
