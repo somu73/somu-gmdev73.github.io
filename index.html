@@ -17,39 +17,66 @@
 
 <body>
 
-    <!-- Header -->
-    <nav class="nav">
-        <a href="#games">GAMES</a>
-        <a href="#about">ABOUT</a>
+    <!-- =========================
+         Header
+    ========================== -->
 
-        <a href="https://www.youtube.com/@somu_gmdev73"
-            target="_blank"
-            rel="noopener noreferrer">
-            YOUTUBE
+    <header class="header">
+
+        <a href="#home" class="logo">
+            SOMU
         </a>
 
-        <a href="https://x.com/somu_gmdv73"
-            target="_blank"
-            rel="noopener noreferrer">
-            X
-        </a>
-    </nav>
+        <nav class="nav">
+            <a href="#home">HOME</a>
+            <a href="#games">GAMES</a>
+            <a href="#about">ABOUT</a>
+
+            <a
+                href="https://www.youtube.com/@somu_gmdev73"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                YOUTUBE
+            </a>
+
+            <a
+                href="https://x.com/somu_gmdv73"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                X
+            </a>
+        </nav>
+
+    </header>
 
 
-    <!-- Main -->
+    <!-- =========================
+         Main
+    ========================== -->
+
     <main>
 
-        <!-- Hero -->
-        <section class="hero">
+
+        <!-- =========================
+             00 HOME
+        ========================== -->
+
+        <section class="hero" id="home">
 
             <div class="hero-content">
+
+                <p class="section-number">
+                    00
+                </p>
 
                 <p class="hero-label">
                     INDIE GAME DEVELOPER
                 </p>
 
                 <h1>
-                    そむ<span>。</span>
+                    somu<span>.</span>
                 </h1>
 
                 <p class="hero-description">
@@ -60,66 +87,191 @@
             </div>
 
 
-            <div class="scroll">
-                <span>SCROLL</span>
+            <!-- Scroll Guide -->
+
+            <a href="#games" class="scroll">
+
+                <span>
+                    SCROLL
+                </span>
+
                 <div class="scroll-line"></div>
-            </div>
+
+            </a>
 
         </section>
 
 
-        <!-- Games -->
+
+        <!-- =========================
+             01 GAMES
+        ========================== -->
+
         <section class="section games" id="games">
 
-            <p class="section-number">01</p>
+            <div class="section-content">
 
-            <h2>GAMES</h2>
+                <p class="section-number">
+                    01
+                </p>
 
-            <p class="section-description">
-                制作したゲームをここに公開していきます。
-            </p>
+                <h2>
+                    GAMES
+                </h2>
 
-            <div class="coming-soon">
-                COMING SOON
+                <p class="section-description">
+                    制作したゲームをここに公開していきます。
+                </p>
+
+
+                <!-- Game Area -->
+
+                <div class="coming-soon">
+
+                    <div>
+
+                        <p>
+                            COMING SOON
+                        </p>
+
+                    </div>
+
+                </div>
+
             </div>
+
+
+            <!-- Next Section -->
+
+            <a href="#about" class="next-section">
+
+                <span>
+                    NEXT
+                </span>
+
+                <span class="next-arrow">
+                    ↓
+                </span>
+
+            </a>
 
         </section>
 
 
-        <!-- About -->
+
+        <!-- =========================
+             02 ABOUT
+        ========================== -->
+
         <section class="section about" id="about">
 
-            <p class="section-number">02</p>
+            <div class="section-content">
 
-            <h2>ABOUT</h2>
-
-            <div class="about-content">
-
-                <h3>そむ。</h3>
-
-                <p>
-                    趣味でゲームを作っています。
+                <p class="section-number">
+                    02
                 </p>
 
-                <p>
-                    Unityを使ったゲーム制作を中心に、<br>
-                    制作したゲームやゲーム作りに関する
-                    動画・配信などを公開していきます。
-                </p>
+                <h2>
+                    ABOUT
+                </h2>
+
+
+                <div class="about-content">
+
+                    <h3>
+                        somu
+                    </h3>
+
+                    <p>
+                        趣味でゲームを作っています。
+                    </p>
+
+                    <p>
+                        Unityを使ったゲーム制作を中心に、<br>
+                        制作したゲームやゲーム作りに関する<br>
+                        動画・配信などを公開していきます。
+                    </p>
+
+
+                    <!-- Social Links -->
+
+                    <div class="social-links">
+
+                        <a
+                            href="https://www.youtube.com/@somu_gmdev73"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            YouTube ↗
+                        </a>
+
+                        <a
+                            href="https://x.com/somu_gmdv73"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            X ↗
+                        </a>
+
+                    </div>
+
+                </div>
 
             </div>
+
+
+            <!-- Back to Top -->
+
+            <a href="#home" class="back-top">
+
+                <span>
+                    BACK TO TOP
+                </span>
+
+                <span>
+                    ↑
+                </span>
+
+            </a>
 
         </section>
 
     </main>
 
 
-    <!-- Footer -->
+    <!-- =========================
+         Page Indicator
+    ========================== -->
+
+    <div class="page-indicator">
+
+        <a href="#home" aria-label="Home">
+            <span>00</span>
+        </a>
+
+        <a href="#games" aria-label="Games">
+            <span>01</span>
+        </a>
+
+        <a href="#about" aria-label="About">
+            <span>02</span>
+        </a>
+
+    </div>
+
+
+    <!-- =========================
+         Footer
+    ========================== -->
+
     <footer class="footer">
 
-        <p>© 2026 somu</p>
+        <p>
+            © 2026 somu
+        </p>
 
     </footer>
+
 
     <script src="js/main.js"></script>
 
