@@ -1,1 +1,527 @@
+/* ==================================================
+   Games Page
+================================================== */
 
+.games-page {
+    min-height: 100vh;
+
+    background: #0d0f11;
+    color: #eeeeee;
+
+    /* トップページのスクロールスナップを無効化 */
+    scroll-snap-type: none;
+}
+
+
+/* ==================================================
+   Main
+================================================== */
+
+.games-main {
+    width: 100%;
+
+    max-width: 1500px;
+
+    margin: 0 auto;
+
+    padding:
+        160px
+        10%
+        100px;
+}
+
+
+/* ==================================================
+   Games Header
+================================================== */
+
+.games-header {
+    width: 100%;
+
+    margin-bottom: 70px;
+}
+
+.games-header .section-number {
+    margin-bottom: 15px;
+
+    color: #4b5157;
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+}
+
+.games-header h1 {
+    font-size: clamp(50px, 7vw, 90px);
+
+    font-weight: 500;
+
+    letter-spacing: 4px;
+
+    line-height: 1.1;
+}
+
+.games-description {
+    margin-top: 18px;
+
+    color: #777;
+
+    font-size: 14px;
+
+    letter-spacing: 1px;
+}
+
+
+/* ==================================================
+   Game List
+================================================== */
+
+.game-list-section {
+    width: 100%;
+}
+
+
+/* ==================================================
+   Game Grid
+================================================== */
+
+.game-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 60px 40px;
+}
+
+
+/* ==================================================
+   Game Card
+================================================== */
+
+.game-card {
+    position: relative;
+
+    min-width: 0;
+}
+
+
+/* ==================================================
+   Game Thumbnail
+================================================== */
+
+.game-thumbnail {
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    overflow: hidden;
+
+    background: #101214;
+
+    border: 1px solid #25292d;
+}
+
+.game-thumbnail img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.5s ease,
+        opacity 0.5s ease;
+}
+
+.game-card:hover .game-thumbnail img {
+    transform: scale(1.025);
+
+    opacity: 0.8;
+}
+
+
+/* ==================================================
+   Thumbnail Overlay
+================================================== */
+
+.game-thumbnail::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(13, 15, 17, 0);
+
+    transition: background 0.3s;
+}
+
+.game-card:hover .game-thumbnail::after {
+    background: rgba(13, 15, 17, 0.12);
+}
+
+
+/* ==================================================
+   Game Information
+================================================== */
+
+.game-info {
+    padding-top: 22px;
+}
+
+
+/* Number */
+
+.game-number {
+    margin-bottom: 7px;
+
+    color: #4b5157;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+}
+
+
+/* Title */
+
+.game-title {
+    color: #eeeeee;
+
+    font-size: clamp(20px, 2vw, 28px);
+
+    font-weight: 400;
+
+    letter-spacing: 2px;
+
+    line-height: 1.4;
+}
+
+
+/* Meta */
+
+.game-meta {
+    margin-top: 8px;
+
+    color: #555b60;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+
+/* Description */
+
+.game-description {
+    max-width: 520px;
+
+    margin-top: 17px;
+
+    color: #777;
+
+    font-size: 13px;
+
+    line-height: 1.9;
+}
+
+
+/* ==================================================
+   Play Link
+================================================== */
+
+.game-play {
+    display: inline-block;
+
+    position: relative;
+
+    margin-top: 22px;
+
+    padding-bottom: 5px;
+
+    color: #999;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    transition: color 0.2s;
+}
+
+.game-play::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 1px;
+
+    background: #3c4146;
+
+    transition:
+        width 0.25s,
+        background 0.25s;
+}
+
+.game-play:hover {
+    color: #ffffff;
+}
+
+.game-play:hover::after {
+    width: 45%;
+
+    background: #ffffff;
+}
+
+
+/* ==================================================
+   Empty
+================================================== */
+
+.games-empty {
+    width: 100%;
+
+    min-height: 300px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid #25292d;
+
+    color: #444;
+
+    font-size: 11px;
+
+    letter-spacing: 6px;
+}
+
+
+/* hidden属性を確実に反映 */
+
+.games-empty[hidden] {
+    display: none;
+}
+
+
+/* ==================================================
+   Back Home
+================================================== */
+
+.games-back {
+    margin-top: 100px;
+
+    padding-top: 30px;
+
+    border-top: 1px solid #1b1e21;
+}
+
+.games-back a {
+    display: inline-block;
+
+    color: #555;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    transition:
+        color 0.2s,
+        transform 0.2s;
+}
+
+.games-back a:hover {
+    color: #ffffff;
+
+    transform: translateX(-5px);
+}
+
+
+/* ==================================================
+   Footer
+================================================== */
+
+.games-footer {
+    width: 100%;
+
+    padding:
+        25px
+        10%
+        35px;
+
+    border-top: 1px solid #1b1e21;
+}
+
+.games-footer p {
+    color: #34383c;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+}
+
+
+/* ==================================================
+   Current Navigation
+================================================== */
+
+.games-page .nav .current {
+    color: #ffffff;
+}
+
+.games-page .nav .current::after {
+    width: 100%;
+}
+
+
+/* ==================================================
+   Tablet
+================================================== */
+
+@media (max-width: 1000px) {
+
+    .games-main {
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+
+    .game-grid {
+        gap:
+            50px
+            30px;
+    }
+
+    .games-footer {
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+
+}
+
+
+/* ==================================================
+   Smartphone
+================================================== */
+
+@media (max-width: 700px) {
+
+    .games-main {
+        padding:
+            110px
+            7%
+            70px;
+    }
+
+
+    /* Header */
+
+    .games-header {
+        margin-bottom: 45px;
+    }
+
+    .games-header h1 {
+        font-size: clamp(48px, 14vw, 80px);
+
+        letter-spacing: 2px;
+    }
+
+    .games-description {
+        margin-top: 14px;
+
+        font-size: 12px;
+    }
+
+
+    /* Grid */
+
+    .game-grid {
+        grid-template-columns: 1fr;
+
+        gap: 55px;
+    }
+
+
+    /* Game */
+
+    .game-info {
+        padding-top: 17px;
+    }
+
+    .game-title {
+        font-size: 21px;
+    }
+
+    .game-description {
+        margin-top: 13px;
+
+        font-size: 12px;
+    }
+
+    .game-play {
+        margin-top: 18px;
+    }
+
+
+    /* Back */
+
+    .games-back {
+        margin-top: 70px;
+    }
+
+
+    /* Footer */
+
+    .games-footer {
+        padding:
+            20px
+            7%
+            25px;
+    }
+
+}
+
+
+/* ==================================================
+   Small Smartphone
+================================================== */
+
+@media (max-width: 400px) {
+
+    .games-main {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .games-header h1 {
+        font-size: 13vw;
+    }
+
+    .game-grid {
+        gap: 45px;
+    }
+
+    .game-title {
+        font-size: 19px;
+    }
+
+    .game-description {
+        font-size: 11px;
+    }
+
+    .games-footer {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+}
