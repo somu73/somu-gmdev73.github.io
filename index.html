@@ -3,7 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Responsive -->
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>somu | Game Developer</title>
 
@@ -15,11 +20,13 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
+
 <body>
 
-    <!-- =========================
+
+    <!-- ==================================================
          Header
-    ========================== -->
+    =================================================== -->
 
     <header class="header">
 
@@ -27,15 +34,26 @@
             SOMU
         </a>
 
+
         <nav class="nav">
-            <a href="#home">HOME</a>
-            <a href="#games">GAMES</a>
-            <a href="#about">ABOUT</a>
+
+            <a href="#home">
+                HOME
+            </a>
+
+            <a href="#games">
+                GAMES
+            </a>
+
+            <a href="#about">
+                ABOUT
+            </a>
 
             <a
                 href="https://www.youtube.com/@somu_gmdev73"
                 target="_blank"
                 rel="noopener noreferrer"
+                class="external-link"
             >
                 YOUTUBE
             </a>
@@ -44,26 +62,32 @@
                 href="https://x.com/somu_gmdv73"
                 target="_blank"
                 rel="noopener noreferrer"
+                class="external-link"
             >
                 X
             </a>
+
         </nav>
 
     </header>
 
 
-    <!-- =========================
+
+    <!-- ==================================================
          Main
-    ========================== -->
+    =================================================== -->
 
     <main>
 
 
-        <!-- =========================
+        <!-- ==================================================
              00 HOME
-        ========================== -->
+        =================================================== -->
 
-        <section class="hero" id="home">
+        <section
+            class="hero"
+            id="home"
+        >
 
             <div class="hero-content">
 
@@ -71,25 +95,34 @@
                     00
                 </p>
 
+
                 <p class="hero-label">
                     INDIE GAME DEVELOPER
                 </p>
+
 
                 <h1>
                     somu<span>.</span>
                 </h1>
 
+
                 <p class="hero-description">
-                    個人でゲームを作っています。<br>
+                    個人でゲームを作っています。
+                    <br>
                     Unity / Game Development
                 </p>
 
             </div>
 
 
+
             <!-- Scroll Guide -->
 
-            <a href="#games" class="scroll">
+            <a
+                href="#games"
+                class="scroll"
+                aria-label="ゲーム一覧へ"
+            >
 
                 <span>
                     SCROLL
@@ -103,47 +136,55 @@
 
 
 
-        <!-- =========================
+        <!-- ==================================================
              01 GAMES
-        ========================== -->
+        =================================================== -->
 
-        <section class="section games" id="games">
+        <section
+            class="section games"
+            id="games"
+        >
 
             <div class="section-content">
+
 
                 <p class="section-number">
                     01
                 </p>
 
+
                 <h2>
                     GAMES
                 </h2>
+
 
                 <p class="section-description">
                     制作したゲームをここに公開していきます。
                 </p>
 
 
+
                 <!-- Game Area -->
 
                 <div class="coming-soon">
 
-                    <div>
-
-                        <p>
-                            COMING SOON
-                        </p>
-
-                    </div>
+                    <p>
+                        COMING SOON
+                    </p>
 
                 </div>
 
             </div>
 
 
-            <!-- Next Section -->
 
-            <a href="#about" class="next-section">
+            <!-- Next -->
+
+            <a
+                href="#about"
+                class="next-section"
+                aria-label="ABOUTへ"
+            >
 
                 <span>
                     NEXT
@@ -159,43 +200,58 @@
 
 
 
-        <!-- =========================
+        <!-- ==================================================
              02 ABOUT
-        ========================== -->
+        =================================================== -->
 
-        <section class="section about" id="about">
+        <section
+            class="section about"
+            id="about"
+        >
 
             <div class="section-content">
+
 
                 <p class="section-number">
                     02
                 </p>
+
 
                 <h2>
                     ABOUT
                 </h2>
 
 
+
                 <div class="about-content">
+
 
                     <h3>
                         somu
                     </h3>
 
+
                     <p>
                         趣味でゲームを作っています。
                     </p>
 
+
                     <p>
-                        Unityを使ったゲーム制作を中心に、<br>
-                        制作したゲームやゲーム作りに関する<br>
+                        Unityを使ったゲーム制作を中心に、
+                        <br class="desktop-break">
+
+                        制作したゲームやゲーム作りに関する
+                        <br class="desktop-break">
+
                         動画・配信などを公開していきます。
                     </p>
 
 
-                    <!-- Social Links -->
+
+                    <!-- Social -->
 
                     <div class="social-links">
+
 
                         <a
                             href="https://www.youtube.com/@somu_gmdev73"
@@ -205,6 +261,7 @@
                             YouTube ↗
                         </a>
 
+
                         <a
                             href="https://x.com/somu_gmdv73"
                             target="_blank"
@@ -213,6 +270,7 @@
                             X ↗
                         </a>
 
+
                     </div>
 
                 </div>
@@ -220,9 +278,14 @@
             </div>
 
 
+
             <!-- Back to Top -->
 
-            <a href="#home" class="back-top">
+            <a
+                href="#home"
+                class="back-top"
+                aria-label="ページトップへ"
+            >
 
                 <span>
                     BACK TO TOP
@@ -239,30 +302,49 @@
     </main>
 
 
-    <!-- =========================
+
+    <!-- ==================================================
          Page Indicator
-    ========================== -->
+    =================================================== -->
 
-    <div class="page-indicator">
+    <nav
+        class="page-indicator"
+        aria-label="ページナビゲーション"
+    >
 
-        <a href="#home" aria-label="Home">
+        <a
+            href="#home"
+            aria-label="Home"
+            data-section="home"
+        >
             <span>00</span>
         </a>
 
-        <a href="#games" aria-label="Games">
+
+        <a
+            href="#games"
+            aria-label="Games"
+            data-section="games"
+        >
             <span>01</span>
         </a>
 
-        <a href="#about" aria-label="About">
+
+        <a
+            href="#about"
+            aria-label="About"
+            data-section="about"
+        >
             <span>02</span>
         </a>
 
-    </div>
+    </nav>
 
 
-    <!-- =========================
+
+    <!-- ==================================================
          Footer
-    ========================== -->
+    =================================================== -->
 
     <footer class="footer">
 
@@ -273,7 +355,11 @@
     </footer>
 
 
+
+    <!-- JavaScript -->
+
     <script src="js/main.js"></script>
+
 
 </body>
 
