@@ -88,6 +88,8 @@
 }
 
 .unity-container {
+    position: relative;
+
     width: 100%;
 
     aspect-ratio: 16 / 9;
@@ -101,37 +103,110 @@
 
 
 /* ==================================================
-   Temporary Screen
+   Unity Canvas
 ================================================== */
 
-.unity-placeholder {
+#unity-canvas {
+    display: block;
+
     width: 100%;
     height: 100%;
 
-    display: flex;
+    background: #000;
 
+    outline: none;
+}
+
+
+/* ==================================================
+   Unity Loading
+================================================== */
+
+.unity-loading {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
     flex-direction: column;
 
     justify-content: center;
     align-items: center;
 
-    gap: 10px;
+    gap: 12px;
 
-    color: #444;
+    background: #080a0c;
+
+    z-index: 2;
 }
 
-.unity-placeholder p {
-    font-size: 12px;
+.unity-loading p {
+    color: #777;
 
-    letter-spacing: 6px;
+    font-size: 10px;
+
+    letter-spacing: 5px;
 }
 
-.unity-placeholder span {
-    color: #303438;
+
+/* Progress */
+
+.unity-progress {
+    width: min(280px, 60%);
+    height: 1px;
+
+    overflow: hidden;
+
+    background: #25292d;
+}
+
+.unity-progress-bar {
+    width: 0;
+    height: 100%;
+
+    background: #eeeeee;
+
+    transition: width 0.15s;
+}
+
+.unity-loading span {
+    color: #555;
 
     font-size: 9px;
 
-    letter-spacing: 3px;
+    letter-spacing: 2px;
+}
+
+
+/* ==================================================
+   Unity Error
+================================================== */
+
+.unity-error {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background: #080a0c;
+
+    color: #777;
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    text-align: center;
+
+    z-index: 3;
+}
+
+.unity-error[hidden] {
+    display: none;
 }
 
 
@@ -210,6 +285,30 @@
         font-size: clamp(36px, 11vw, 60px);
     }
 
+
+    /* Unity */
+
+    .unity-progress {
+        width: 65%;
+    }
+
+    .unity-loading p {
+        font-size: 9px;
+
+        letter-spacing: 4px;
+    }
+
+    .unity-error {
+        padding: 20px;
+
+        font-size: 9px;
+
+        letter-spacing: 3px;
+    }
+
+
+    /* Information */
+
     .play-information {
         margin-top: 45px;
     }
@@ -217,6 +316,9 @@
     .play-information p {
         font-size: 12px;
     }
+
+
+    /* Footer */
 
     .play-page .games-footer {
         padding:

@@ -1,23 +1,30 @@
-/* ==================================================
-   Game Data
-================================================== */
-
 const games = [
     {
         id: "game-01",
 
-        title: "GAME TITLE",
+        title: "SHOOTING GAME",
 
-        genre: "Action",
+        genre: "Shooting",
 
         year: "2026",
 
-        description: "Unityで制作したゲームです。",
+        description:
+            "サイトにゲームを公開するために制作した、シンプルなシューティングゲームです。",
 
-        thumbnail: "images/games/game-01/thumbnail.jpg",
+        thumbnail:
+            "images/games/game-01/thumbnail.jpg",
 
         status: "released",
 
-        playUrl: "play.html?game=game-01"
+        playUrl:
+            "play.html?game=game-01",
+
+        webgl: {
+            buildPath:
+                "webgl/game-01/Build",
+
+            buildName:
+                "Game"
+        }
     }
 ];

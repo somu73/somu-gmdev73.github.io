@@ -9,7 +9,7 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>そむ。| GAME</title>
+    <title>そむ。｜ GAME</title>
 
     <meta
         name="description"
@@ -108,7 +108,9 @@
 
 
 
-        <!-- Game Header -->
+        <!-- ==================================================
+             Game Header
+        =================================================== -->
 
         <section class="play-header">
 
@@ -142,15 +144,54 @@
                 class="unity-container"
             >
 
-                <div class="unity-placeholder">
+                <!-- Unity WebGL Canvas -->
+
+                <canvas
+                    id="unity-canvas"
+                    tabindex="-1"
+                >
+                </canvas>
+
+
+                <!-- Loading -->
+
+                <div
+                    id="unity-loading"
+                    class="unity-loading"
+                >
 
                     <p>
-                        GAME SCREEN
+                        LOADING
                     </p>
 
-                    <span>
-                        Unity WebGL
+                    <div class="unity-progress">
+
+                        <div
+                            id="unity-progress-bar"
+                            class="unity-progress-bar"
+                        >
+                        </div>
+
+                    </div>
+
+                    <span id="unity-progress-text">
+                        0%
                     </span>
+
+                </div>
+
+
+                <!-- Error -->
+
+                <div
+                    id="unity-error"
+                    class="unity-error"
+                    hidden
+                >
+
+                    <p>
+                        FAILED TO LOAD GAME
+                    </p>
 
                 </div>
 
@@ -180,7 +221,9 @@
 
 
 
-    <!-- Footer -->
+    <!-- ==================================================
+         Footer
+    =================================================== -->
 
     <footer class="games-footer">
 
